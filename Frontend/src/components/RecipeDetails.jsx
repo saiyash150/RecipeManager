@@ -8,7 +8,7 @@ const RecipeDetails = ({ recipe, onDelete ,onEdit}) => {
       <p className={styles.ingredients}><strong>Ingredients:</strong> {recipe.ingredients}</p>
       <p className={styles.ingredients}><strong>Instructions:</strong> {recipe.instructions}</p>
       <p className={styles.ingredients}><strong>Category:</strong> {recipe.category}</p>
-      <img src={recipe.imageUrl} alt={recipe.title} width="100" />
+      <img src={recipe.imageUrl} alt={recipe.title} width="300" height="200" />
       <div className="buttonContainer">
       <button className={styles.backButton} onClick={() => onDelete(recipe._id)}>Delete</button>
       <button className={styles.backButton} onClick={() => onEdit(recipe)}>Edit</button>
