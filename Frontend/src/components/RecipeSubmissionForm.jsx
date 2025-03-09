@@ -41,11 +41,11 @@ const RecipeSubmissionForm = ({
             "Accept": "application/json"
           },
           body: JSON.stringify({
-            "title": "Chicken Biryani",
-            "ingredients": "Rice, Chicken, Spices",
-            "instructions": "Cook it slowly for 2 hours",
-            "category": "Dinner",
-            "imageUrl": "https://example.com/image.jpg"
+            title: String(recipe.title),
+            ingredients: String(recipe.ingredients),
+            instructions: String(recipe.instructions),
+            category: String(recipe.category),
+            imageUrl: String(recipe.imageUrl)
           })
         }
       );
