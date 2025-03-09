@@ -1,14 +1,18 @@
 import React from 'react';
+import styles from '../styles/RecipeDetails.module.css';
 
-const RecipeDetails = ({ recipe, onDelete }) => {
+const RecipeDetails = ({ recipe, onDelete ,onEdit}) => {
   return (
-    <div>
-      <h3>{recipe.title}</h3>
-      <p><strong>Ingredients:</strong> {recipe.ingredients.join(', ')}</p>
-      <p><strong>Instructions:</strong> {recipe.instructions}</p>
-      <p><strong>Category:</strong> {recipe.category}</p>
+    <div className={styles.container}>
+      <h3 className={styles.title}>{recipe.title}</h3>
+      <p className={styles.ingredients}><strong>Ingredients:</strong> {recipe.ingredients.join(', ')}</p>
+      <p className={styles.ingredients}><strong>Instructions:</strong> {recipe.instructions}</p>
+      <p className={styles.ingredients}><strong>Category:</strong> {recipe.category}</p>
       <img src={recipe.imageUrl} alt={recipe.title} width="100" />
-      <button onClick={() => onDelete(recipe._id)}>Delete</button>
+      <div className="buttonContainer">
+      <button className={styles.backButton} onClick={() => onDelete(recipe._id)}>Delete</button>
+      <button className={styles.backButton} onClick={() => onEdit(recipe)}>Edit</button>
+      </div>
     </div>
   );
 };

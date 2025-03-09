@@ -6,7 +6,7 @@ const recipeSchema = mongoose.Schema({
         required: [true, 'Please enter a recipe title']
     },
     ingredients: {
-        type: [String],
+        type: String,
         required: [true, 'Please enter ingredients']
     },
     instructions: {
@@ -15,15 +15,13 @@ const recipeSchema = mongoose.Schema({
     },
     category: {
         type: String,
-        enum: ['Breakfast', 'Lunch', 'Dinner', 'Snack'],
+        // enum: ['Breakfast', 'Lunch', 'Dinner', 'Snack'],
         required: true
     },
     imageUrl: {
         type: String,
         required: true
     },
-}, {
-    timestamps: true
 });
 
 module.exports = mongoose.model('Recipe', recipeSchema);

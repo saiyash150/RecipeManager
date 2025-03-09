@@ -1,5 +1,6 @@
 .container {
-    max-width: 1200px;
+    display:flex;
+    
     margin: 0 auto;
     padding: 20px;
   }
@@ -47,4 +48,11 @@
   .card button:hover {
     background-color: #e84118;
   }
-  
+  .recipeList{
+    display:flex;
+    flex-wrap: wrap;
+    margin-top:3%;
+  }
+  .formed{
+    width:30%
+  }

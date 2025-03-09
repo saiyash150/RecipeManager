@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/recipes';
+const API_URL = 'https://recipemanager-qnqg.onrender.com/api/recipes';
 
 export const getRecipes = async () => {
   const response = await axios.get(API_URL);
