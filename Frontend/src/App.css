@@ -2,3 +2,91 @@
 .app-container {
   padding: 20px;
 }
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+  .app-container {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .app-container {
+    padding: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .app-container {
+    padding: 10px;
+  }
+  
+  /* Adjust recipe list layout */
+  :global(.recipeList) {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .app-container {
+    padding: 8px;
+  }
+  
+  /* Make recipe cards take full width on mobile */
+  :global(.cardContainer),
+  :global(.container) {
+    width: 100% !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  
+  /* Adjust form width for mobile */
+  :global(.formContainer) {
+    max-width: 100% !important;
+    padding: 15px !important;
+  }
+  
+  /* Adjust button sizes for better touch targets */
+  :global(button) {
+    padding: 12px 15px !important;
+    font-size: 16px !important;
+  }
+}
+
+/* Fix flex layout for the main container */
+:global(#root) {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Ensure content fills available space */
+:global(main) {
+  flex: 1;
+}
+
+/* Improve image responsiveness */
+:global(img) {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure form inputs are responsive */
+:global(input),
+:global(textarea),
+:global(select) {
+  max-width: 100%;
+}
+
+/* Improve container layout on medium screens */
+@media screen and (min-width: 577px) and (max-width: 991px) {
+  :global(.cardContainer),
+  :global(.container) {
+    width: 45% !important;
+    margin: 10px !important;
+  }
+  
+  :global(.formContainer) {
+    max-width: 80% !important;
+  }
+}

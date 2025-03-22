@@ -16,6 +16,9 @@
     text-align: center;
     font-size: 24px;
   }
+  .background{
+    background-color:black;
+  }
   
   .footer {
     background-color: #222;

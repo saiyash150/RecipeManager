@@ -4,8 +4,8 @@ import RecipeList from "./components/RecipeList";
 import "./styles/App.module.css";
 function App() {
   return (
-    <div>
-      <h1 style={{ textAlign: "center", paddingTop: 10 }}>
+    <div className="background">
+      <h1 style={{ textAlign: "center", paddingTop: 20 }}>
         Recipe Management Application
       </h1>
 
