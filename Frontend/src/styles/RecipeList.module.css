@@ -48,3 +48,22 @@
   overflow: auto;
 
 }
+
+
+@media screen and (max-width: 576px) {
+  .container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .recipeList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .formed {
+    width: 300px;
+  }
+ 
+  
+}

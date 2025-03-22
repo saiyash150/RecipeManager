@@ -61,4 +61,10 @@
     border: 1px solid #ff4757;
     box-shadow: 0 5px 20px rgba(255, 71, 87, 0.2);
   }
-  
+  @media screen and (max-width: 576px) {
+
+
+
+
+    
+  }
